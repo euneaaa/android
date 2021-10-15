@@ -23,6 +23,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ddd(View v){
+        //누를 때 마다 1씩 증가시키기.
+        //v에 담겨있는 객체주소값을 TextView타입으로 저장할 수 있으면 true 없으면 false
+        if(v instanceof TextView){
+            TextView tv = (TextView)v;
+            String val = (String)tv.getText();
+            int intVal = Integer.parseInt(val);
+            intVal +=1;
+            String parseStrVal = String.valueOf(intVal);
+            tv.setText(parseStrVal);
+        }
+    }
+
+    /*
+    public void ddd(View v){
         TextView tv= (TextView)v;
         String str = (String)tv.getText();
         Toast.makeText(this, str,Toast.LENGTH_LONG).show();
@@ -33,6 +47,4 @@ public class MainActivity extends AppCompatActivity {
     TextView tv= (TextView)v;
     Toast.makeText(this, tv.getText(), Toast.LENGTH_LONG).show();
      */
-    }
-
 }
