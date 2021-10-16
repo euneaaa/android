@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/black"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <!-- 날짜 -->
@@ -62,25 +62,28 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <View android:layout_width="0dp"
-                android:layout_gravity="center_vertical"
+            <View
+                android:layout_width="0dp"
                 android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:background="#ffffff"/>
+                android:background="#ffffff" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="2016년 01월 18일 (월요일)"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:text="2016년 01월 18일 (월요일)"
+                android:textColor="@color/black" />
 
-            <View android:layout_width="0dp"
-                android:layout_gravity="center_vertical"
+            <View
+                android:layout_width="0dp"
                 android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:background="#ffffff"/>
+                android:background="#ffffff" />
         </LinearLayout>
 
         <LinearLayout
@@ -99,18 +102,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:background="#ABC9EA"
                 android:padding="10dp"
                 android:text="[국민 안전처]\n18일18시 경기북부, 강원지역 한파경보,\n외출자제 건강유의, 동파방지, 화재예방 등\n피해없게 주의해 주십시오." />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:layout_gravity="bottom"
-                android:text="오후 3:11" />
+                android:text="오후 3:11"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
@@ -122,25 +125,27 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <View android:layout_width="0dp"
-                android:layout_gravity="center_vertical"
+            <View
+                android:layout_width="0dp"
                 android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:background="#ffffff"/>
+                android:background="#ffffff" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="2016년 01월 18일 (월요일)"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:text="2016년 04월 15일 (월요일)"
+                android:textColor="@color/black" />
 
-            <View android:layout_width="0dp"
-                android:layout_gravity="center_vertical"
+            <View
+                android:layout_width="0dp"
                 android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:background="#ffffff"/>
+                android:background="#ffffff" />
         </LinearLayout>
 
         <LinearLayout
@@ -159,18 +164,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:background="#ABC9EA"
                 android:padding="10dp"
                 android:text="[국민 안전처]\n18일18시 경기북부, 강원지역 한파경보,\n외출자제 건강유의, 동파방지, 화재예방 등\n피해없게 주의해 주십시오." />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:layout_gravity="bottom"
-                android:text="오후 3:11" />
+                android:text="오후 3:30"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
@@ -190,18 +195,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:background="#ABC9EA"
                 android:padding="10dp"
                 android:text="[국민 안전처]\n18일18시 경기북부, 강원지역 한파경보,\n외출자제 건강유의, 동파방지, 화재예방 등\n피해없게 주의해 주십시오." />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:layout_gravity="bottom"
-                android:text="오후 3:11" />
+                android:text="오후 4:11"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
@@ -219,8 +224,9 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_weight="1"></EditText>
+            android:layout_weight="1"
+            android:backgroundTint="#FFFCFC"
+            android:textColor="@color/white"></EditText>
 
         <Button
             android:layout_width="wrap_content"
