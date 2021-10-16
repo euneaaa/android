@@ -9,7 +9,7 @@
         <entry key="..\:/application/first/app/src/main/res/layout/activity_constraint_exam1.xml" value="0.33" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_linear.xml" value="0.36614583333333334" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_linear_exam1.xml" value="0.25" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_linear_exam2.xml" value="0.6293643688451208" />
+        <entry key="..\:/application/first/app/src/main/res/layout/activity_linear_exam2.xml" value="0.33" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_menu.xml" value="0.31197916666666664" />
       </map>
@@ -24,7 +24,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.33" />
+        <option name="scale" value="0.1487481590574374" />
       </ProjectState>
     </option>
   </component>

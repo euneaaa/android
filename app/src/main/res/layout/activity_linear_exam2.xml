@@ -67,7 +67,7 @@
                 android:layout_height="1dp"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:background="#ffffff" />
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
                 android:layout_height="1dp"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:background="#ffffff" />
+                android:background="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -130,7 +130,7 @@
                 android:layout_height="1dp"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:background="#ffffff" />
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -145,7 +145,7 @@
                 android:layout_height="1dp"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:background="#ffffff" />
+                android:background="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -217,15 +217,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#12181E"
+        android:orientation="horizontal"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:orientation="horizontal">
+        android:paddingRight="10dp">
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#FFFCFC"
+            android:backgroundTint="#CDD6EA"
             android:textColor="@color/white"></EditText>
 
         <Button
