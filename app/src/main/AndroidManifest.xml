@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.First">
         <activity
+            android:name=".ch07.BookPersonActivity"
+            android:exported="false" />
+        <activity
             android:name=".MenuActivity"
             android:exported="true">
             <intent-filter>
@@ -18,9 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConstraintActivity">
-
-        </activity>
+        <activity
+            android:name=".MyWriteActivity"
+            android:exported="true" />
+        <activity android:name=".WriteActivity" />
+        <activity android:name=".ConstraintActivity" />
         <activity android:name=".LinearActivity" />
         <activity android:name=".MainActivity" />
     </application>

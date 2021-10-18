@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.koreait.first.ch07.BookPersonActivity;
+
 public class MenuActivity extends AppCompatActivity {
 
     @Override
@@ -34,6 +36,10 @@ public class MenuActivity extends AppCompatActivity {
                 c= LinearActivity.class; break;
             case R.id.menubtn3:
                 c= ConstraintActivity.class; break;
+            case R.id.menubtn4:
+                c= WriteActivity.class; break;
+            case R.id.menubtn5:
+                c= BookPersonActivity.class; break;
         }
         Intent intent = new Intent(this, c);
         startActivity(intent);

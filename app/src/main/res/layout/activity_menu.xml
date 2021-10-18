@@ -35,6 +35,23 @@
             android:layout_height="wrap_content"
             android:onClick="call"
             android:text="전화"/>
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/menubtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToActivity"
+            android:text="글쓰기레이아웃"/>
+
+        <Button
+            android:id="@+id/menubtn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToActivity"
+            android:text="Person"/>
 
 
     </TableRow>
