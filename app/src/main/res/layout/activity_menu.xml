@@ -6,35 +6,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#A80000"
     tools:context=".MenuActivity">
 
     <TableRow>
+
         <Button
             android:id="@+id/menubtn1"
-            android:layout_width="wrap_content"
+            android:layout_width="15dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="#FF3030"
             android:onClick="moveToActivity"
-            android:text="메인"/>
+            android:text="메인" />
 
         <Button
             android:id="@+id/menubtn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#FF4132"
             android:onClick="moveToActivity"
-            android:text="리니어레이아웃"/>
+            android:text="리니어레이아웃" />
 
         <Button
             android:id="@+id/menubtn3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#FFE532"
             android:onClick="moveToActivity"
-            android:text="제약레이아웃"/>
+            android:text="제약레이아웃" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4CFF76"
             android:onClick="call"
-            android:text="전화"/>
+            android:text="전화" />
     </TableRow>
 
     <TableRow>
@@ -43,15 +49,33 @@
             android:id="@+id/menubtn4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#2244FF"
             android:onClick="moveToActivity"
-            android:text="글쓰기레이아웃"/>
+            android:text="글쓰기" />
 
         <Button
             android:id="@+id/menubtn5"
-            android:layout_width="wrap_content"
+            android:layout_width="104dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="#792EFF"
             android:onClick="moveToActivity"
-            android:text="Person"/>
+            android:text="Person" />
+
+        <Button
+            android:id="@+id/menubtn6"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#28CFE4"
+            android:onClick="moveToActivity"
+            android:text="이미지" />
+
+        <Button
+            android:id="@+id/menubtn7"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FA6E9A"
+            android:onClick="moveToActivity"
+            android:text="picsum" />
 
 
     </TableRow>

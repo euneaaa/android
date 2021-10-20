@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_book_person.xml" value="0.25" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_constraint.xml" value="0.21822916666666667" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_constraint_exam1.xml" value="0.22135416666666666" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_imege_view.xml" value="0.19010416666666666" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_linear.xml" value="0.1487481590574374" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_linear_exam1.xml" value="0.21822916666666667" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_linear_exam2.xml" value="0.22" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_menu.xml" value="0.33" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_picsum.xml" value="0.2046875" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_write.xml" value="0.21822916666666667" />
+        <entry key="..\:/android/first/app/src/main/res/layout/person_item.xml" value="0.5" />
         <entry key="..\:/application/first/app/src/main/res/drawable/back.xml" value="0.328125" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_book_person.xml" value="0.29739583333333336" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_constrain.xml" value="0.33" />
@@ -25,12 +36,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.1487481590574374" />
-      </ProjectState>
-    </option>
   </component>
 </project>
