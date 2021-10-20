@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.koreait.first.ch07.BookPersonActivity;
+import com.koreait.first.ch10.DailyBoxofficeActivity;
 import com.koreait.first.picsum.PicsumActivity;
 
 public class MenuActivity extends AppCompatActivity {
@@ -45,6 +46,8 @@ public class MenuActivity extends AppCompatActivity {
                 c= ImageViewActivity.class; break;
             case R.id.menubtn7:
                 c= PicsumActivity.class; break;
+            case R.id.menubtn8:
+                c= DailyBoxofficeActivity.class; break;
         }
         Intent intent = new Intent(this, c);
         startActivity(intent);

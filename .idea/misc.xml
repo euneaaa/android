@@ -19,13 +19,16 @@
         <entry key="..\:/application/first/app/src/main/res/layout/activity_constrain.xml" value="0.33" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_constraint.xml" value="0.36614583333333334" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_constraint_exam1.xml" value="0.33" />
+        <entry key="..\:/application/first/app/src/main/res/layout/activity_daily_boxoffice.xml" value="0.33" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_linear.xml" value="0.36614583333333334" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_linear_exam1.xml" value="0.25" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_linear_exam2.xml" value="0.1487481590574374" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_menu.xml" value="0.31197916666666664" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_my_write.xml" value="0.29739583333333336" />
+        <entry key="..\:/application/first/app/src/main/res/layout/activity_picsum.xml" value="0.25" />
         <entry key="..\:/application/first/app/src/main/res/layout/activity_write.xml" value="0.3558974358974359" />
+        <entry key="..\:/application/first/app/src/main/res/layout/item_picsum.xml" value="0.34564102564102567" />
         <entry key="..\:/application/first/app/src/main/res/layout/item_textview.xml" value="0.36614583333333334" />
         <entry key="..\:/application/first/app/src/main/res/layout/person_item.xml" value="0.31197916666666664" />
       </map>
@@ -36,5 +39,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.34564102564102567" />
+      </ProjectState>
+    </option>
   </component>
 </project>

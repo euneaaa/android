@@ -80,5 +80,14 @@
 
     </TableRow>
 
+    <TableRow>
+        <Button
+            android:id="@+id/menubtn8"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFA4A4"
+            android:onClick="moveToActivity"
+            android:text="박스오피스" />
+    </TableRow>
 
 </TableLayout>
