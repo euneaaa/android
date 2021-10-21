@@ -10,26 +10,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.koreait.first.R;
 import com.koreait.first.Utils;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DailyBoxofficeActivity extends AppCompatActivity {
-
-    private DailyBoxofficeAdapter adapter;
-
+public class WeeklyBoxofficeActivity extends AppCompatActivity {
+    private WeeklyBoxofficeAdapter adapter;
     private DatePicker dpTargetDt;
     private RecyclerView rvList;
 
@@ -37,14 +32,13 @@ public class DailyBoxofficeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_daily_boxoffice);
-        adapter = new DailyBoxofficeAdapter();
+        setContentView(R.layout.activity_weekly_boxoffice);
 
         dpTargetDt = findViewById(R.id.dpTargetDt);
+
+        adapter = new WeeklyBoxofficeAdapter();
         rvList = findViewById(R.id.rvList);
         rvList.setAdapter(adapter);
-
-
     }
 
     private void network(String targetDt) {
@@ -53,9 +47,10 @@ public class DailyBoxofficeActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        KobisService service = rf.create(KobisService.class);
+        KobisWeeklyService service = rf.create(KobisWeeklyService.class);
         final String KEY = "1a0a7ecf96ad3364d8de70e91560767a";
-        Call<BoxOfficeResultBodyVO> call = service.boxofficeSearchDailyBoxOfficeList(KEY, targetDt);
+        String weekGb = "0";
+        Call<BoxOfficeResultBodyVO> call = service.boxofficeSearchWeeklyBoxOfficeList(KEY, targetDt,weekGb);
 
         call.enqueue(new Callback<BoxOfficeResultBodyVO>() {
             @Override
@@ -99,9 +94,7 @@ public class DailyBoxofficeActivity extends AppCompatActivity {
     }
 }
 
-
-
-class DailyBoxofficeAdapter extends RecyclerView.Adapter<DailyBoxofficeAdapter.MyViewHolder> {
+class WeeklyBoxofficeAdapter extends RecyclerView.Adapter<WeeklyBoxofficeAdapter.MyViewHolder> {
 
     private List<DailyBoxOfficeVO> list;
 
@@ -121,8 +114,6 @@ class DailyBoxofficeAdapter extends RecyclerView.Adapter<DailyBoxofficeAdapter.M
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         DailyBoxOfficeVO vo = list.get(position);
         holder.setItem(vo);
-
-        // holder.setItem(list.get(position));
     }
 
     @Override
@@ -148,4 +139,3 @@ class DailyBoxofficeAdapter extends RecyclerView.Adapter<DailyBoxofficeAdapter.M
         }
     }
 }
-

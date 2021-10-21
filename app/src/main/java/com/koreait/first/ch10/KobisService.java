@@ -5,9 +5,15 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface KobisService {
+    //일별 박스오피스
     @GET("boxoffice/searchDailyBoxOfficeList.json")
     Call<BoxOfficeResultBodyVO> boxofficeSearchDailyBoxOfficeList
-    (@Query("key") String key, @Query("targetDt") String targetDt);
+        (@Query("key") String key, @Query("targetDt") String targetDt);
+}
 
-
+interface KobisWeeklyService {
+    //일별 박스오피스
+    @GET("boxoffice/searchWeeklyBoxOfficeList.json")
+    Call<BoxOfficeResultBodyVO> boxofficeSearchWeeklyBoxOfficeList
+    (@Query("key") String key, @Query("targetDt") String targetDt, @Query("weekGb") String weekGb);
 }

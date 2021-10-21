@@ -3,48 +3,42 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_book_person.xml" value="0.25" />
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_constraint.xml" value="0.21822916666666667" />
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_constraint_exam1.xml" value="0.22135416666666666" />
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_imege_view.xml" value="0.19010416666666666" />
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_linear.xml" value="0.1487481590574374" />
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_linear_exam1.xml" value="0.21822916666666667" />
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_linear_exam2.xml" value="0.22" />
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_menu.xml" value="0.33" />
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_picsum.xml" value="0.2046875" />
-        <entry key="..\:/android/first/app/src/main/res/layout/activity_write.xml" value="0.21822916666666667" />
-        <entry key="..\:/android/first/app/src/main/res/layout/person_item.xml" value="0.5" />
-        <entry key="..\:/application/first/app/src/main/res/drawable/back.xml" value="0.328125" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_book_person.xml" value="0.29739583333333336" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_constrain.xml" value="0.33" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_constraint.xml" value="0.36614583333333334" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_constraint_exam1.xml" value="0.33" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_daily_boxoffice.xml" value="0.33" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_linear.xml" value="0.36614583333333334" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_linear_exam1.xml" value="0.25" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_linear_exam2.xml" value="0.1487481590574374" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_menu.xml" value="0.31197916666666664" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_my_write.xml" value="0.29739583333333336" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_picsum.xml" value="0.25" />
-        <entry key="..\:/application/first/app/src/main/res/layout/activity_write.xml" value="0.3558974358974359" />
-        <entry key="..\:/application/first/app/src/main/res/layout/item_picsum.xml" value="0.34564102564102567" />
-        <entry key="..\:/application/first/app/src/main/res/layout/item_textview.xml" value="0.36614583333333334" />
-        <entry key="..\:/application/first/app/src/main/res/layout/person_item.xml" value="0.31197916666666664" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_constraint2.xml" value="0.2864583333333333" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_constraint_exam1.xml" value="0.2864583333333333" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_linear_exam2.xml" value="0.2864583333333333" />
+        <entry key="..\:/android/first/app/src/main/res/layout/activity_weekly_boxoffice.xml" value="0.22291666666666668" />
+        <entry key="..\:/application/first/app/src/main/res/layout/activity_constraint2.xml" value="0.29791666666666666" />
+        <entry key="..\:/application/first/app/src/main/res/layout/activity_daily_boxoffice.xml" value="0.25" />
+        <entry key="..\:/application/first/app/src/main/res/layout/activity_weekly_boxoffice.xml" value="0.29791666666666666" />
+        <entry key="..\:/application/first/app/src/main/res/layout/item_daily_boxoffice.xml" value="0.29791666666666666" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/drawable/back.xml" value="0.28703703703703703" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_book_person.xml" value="0.3359375" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_calc.xml" value="0.33" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_constraint.xml" value="0.5" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_constraint2.xml" value="0.23731884057971014" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_constraint3.xml" value="0.36614583333333334" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_constraint_exam1.xml" value="0.67" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_daily_boxoffice.xml" value="0.18958333333333333" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_image_view.xml" value="0.2953125" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_linear.xml" value="0.5" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_linear_exam1.xml" value="0.36614583333333334" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_linear_exam2.xml" value="0.5263157894736842" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_menu.xml" value="0.1" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_picsum.xml" value="0.30364583333333334" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/activity_write.xml" value="0.33" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/item_daily_boxoffice.xml" value="0.75" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/item_picsum.xml" value="0.2604166666666667" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/item_textview.xml" value="0.33" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/layout/person_item.xml" value="0.34512820512820513" />
+        <entry key="..\:/parkdoheumAndroid/First/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.38229166666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.34564102564102567" />
-      </ProjectState>
-    </option>
   </component>
 </project>

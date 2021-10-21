@@ -9,8 +9,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.koreait.first.ch07.BookPersonActivity;
 import com.koreait.first.ch10.DailyBoxofficeActivity;
+import com.koreait.first.ch10.WeeklyBoxofficeActivity;
 import com.koreait.first.picsum.PicsumActivity;
 
 public class MenuActivity extends AppCompatActivity {
@@ -19,49 +21,63 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        //문자(char) 11a
+        //문자열 "11a"
+        //int 1110
+        //int 0
+        int result = Utils.parseStringToInt("10", 0);
+        Log.i("myLog", "1:" + result);
+
     }
 
-    public void call(View v){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"));
+    public void call(View v) {
+        Intent intent = new Intent(Intent.ACTION_VIEW
+                , Uri.parse("tel:010-1111-2222"));
         startActivity(intent);
     }
 
-    public void moveToActivity(View v){
+    public void moveToActivity(View v) {
         int id = v.getId();
 
         Class c = null;
-        //분기
-        switch (id) {
-            case R.id.menubtn1:
-                c = MainActivity.class; break;
-            case R.id.menubtn2:
-                c= LinearActivity.class; break;
-            case R.id.menubtn3:
-                c= ConstraintActivity.class; break;
-            case R.id.menubtn4:
-                c= WriteActivity.class; break;
-            case R.id.menubtn5:
-                c= BookPersonActivity.class; break;
-            case R.id.menubtn6:
-                c= ImageViewActivity.class; break;
-            case R.id.menubtn7:
-                c= PicsumActivity.class; break;
-            case R.id.menubtn8:
-                c= DailyBoxofficeActivity.class; break;
+        if(id == R.id.menubtn1) {
+            c = MainActivity.class;
+        } else if(id == R.id.menubtn2) {
+            c = LinearActivity.class;
+        } else if(id == R.id.menubtn3) {
+            c = ConstraintActivity.class;
+        } else if(id == R.id.menubtn4) {
+            c = WriteActivity.class;
+        } else if(id == R.id.menubtn5) {
+            c = BookPersonActivity.class;
+        } else if(id == R.id.menubtn6) {
+            c = ImageViewActivity.class;
+        } else if(id == R.id.menubtn7) {
+            c = PicsumActivity.class;
+        } else if(id == R.id.menubtn8) {
+            c = DailyBoxofficeActivity.class;
+        } else if(id == R.id.menubtn9) {
+            c = WeeklyBoxofficeActivity.class;
         }
+
+        if(c == null) {
+            //에러메시지 띄우고
+            Snackbar.make(v, "준비중입니다.", Snackbar.LENGTH_SHORT).show();
+            return;
+        }
+
         Intent intent = new Intent(this, c);
         startActivity(intent);
     }
 
-
-    public void moveToActivityWithText(View v){
+    public void moveToActivityWithText(View v) {
         TextView tv = (TextView)v;
         String text = (String)tv.getText();
         Log.i("myLog", text);
 
         Class c = null;
-
-        switch (text) {
+        switch(text) {
             case "메인":
                 c = MainActivity.class;
                 break;
@@ -72,24 +88,9 @@ public class MenuActivity extends AppCompatActivity {
                 c = ConstraintActivity.class;
                 break;
         }
-            Intent intent = new Intent(this, c);
-            startActivity(intent);
-    }
 
-    /*
-    public void moveToMain(View v){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, c);
         startActivity(intent);
     }
 
-    public void moveToLinear(View v){
-        Intent intent = new Intent(this, LinearActivity.class);
-        startActivity(intent);
-    }
-
-    public void moveToConstraint(View v){
-        Intent intent = new Intent(this, ConstraintActivity.class);
-        startActivity(intent);
-    }
-    */
 }
