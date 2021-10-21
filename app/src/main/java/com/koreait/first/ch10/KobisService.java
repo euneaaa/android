@@ -9,11 +9,13 @@ public interface KobisService {
     @GET("boxoffice/searchDailyBoxOfficeList.json")
     Call<BoxOfficeResultBodyVO> boxofficeSearchDailyBoxOfficeList
         (@Query("key") String key, @Query("targetDt") String targetDt);
-}
 
-interface KobisWeeklyService {
-    //일별 박스오피스
+
+}
+interface WeeklyKobisService {
     @GET("boxoffice/searchWeeklyBoxOfficeList.json")
     Call<BoxOfficeResultBodyVO> boxofficeSearchWeeklyBoxOfficeList
     (@Query("key") String key, @Query("targetDt") String targetDt, @Query("weekGb") String weekGb);
+
+
 }

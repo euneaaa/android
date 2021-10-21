@@ -11,7 +11,6 @@ public class ImageViewActivity extends AppCompatActivity {
 
     private ImageView ivImg;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +19,5 @@ public class ImageViewActivity extends AppCompatActivity {
 
         String imgUrl = "https://item.kakaocdn.net/do/ff45d6bba620a0c61cdc0291ef1339728f324a0b9c48f77dbce3a43bd11ce785";
         Glide.with(this).load(imgUrl).into(ivImg);
-
     }
 }

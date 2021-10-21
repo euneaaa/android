@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 import com.koreait.first.ch07.BookPersonActivity;
 import com.koreait.first.ch10.DailyBoxofficeActivity;
-import com.koreait.first.ch10.WeeklyBoxofficeActivity;
 import com.koreait.first.picsum.PicsumActivity;
 
 public class MenuActivity extends AppCompatActivity {
@@ -57,8 +56,6 @@ public class MenuActivity extends AppCompatActivity {
             c = PicsumActivity.class;
         } else if(id == R.id.menubtn8) {
             c = DailyBoxofficeActivity.class;
-        } else if(id == R.id.menubtn9) {
-            c = WeeklyBoxofficeActivity.class;
         }
 
         if(c == null) {

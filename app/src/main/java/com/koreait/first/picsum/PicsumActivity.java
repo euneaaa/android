@@ -23,7 +23,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PicsumActivity extends AppCompatActivity {
-
     private RecyclerView rvList;
     private PicsumAdapter adapter;
 
@@ -47,7 +46,7 @@ public class PicsumActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        //RetrofitService 인터페이스를 구현한 객체를 리턴해준다.
+        //RetrofitService 인터페이스를 구현한 객체를 리턴해 줍니다.
         RetrofitService service = rf.create(RetrofitService.class);
         Call<List<PicsumVO>> call = service.getList();
 
@@ -122,3 +121,4 @@ class PicsumAdapter extends RecyclerView.Adapter<PicsumAdapter.PicsumViewHolder>
         }
     }
 }
+

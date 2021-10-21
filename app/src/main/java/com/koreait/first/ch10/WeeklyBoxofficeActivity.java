@@ -47,7 +47,7 @@ public class WeeklyBoxofficeActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        KobisWeeklyService service = rf.create(KobisWeeklyService.class);
+        WeeklyKobisService service = rf.create(WeeklyKobisService.class);
         final String KEY = "1a0a7ecf96ad3364d8de70e91560767a";
         String weekGb = "0";
         Call<BoxOfficeResultBodyVO> call = service.boxofficeSearchWeeklyBoxOfficeList(KEY, targetDt,weekGb);

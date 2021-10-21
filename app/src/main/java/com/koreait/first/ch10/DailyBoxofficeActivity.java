@@ -43,8 +43,6 @@ public class DailyBoxofficeActivity extends AppCompatActivity {
         dpTargetDt = findViewById(R.id.dpTargetDt);
         rvList = findViewById(R.id.rvList);
         rvList.setAdapter(adapter);
-
-
     }
 
     private void network(String targetDt) {
@@ -66,6 +64,8 @@ public class DailyBoxofficeActivity extends AppCompatActivity {
                     BoxOfficeResultVO resultVo = vo.getBoxOfficeResult();
                     List<DailyBoxOfficeVO> list = resultVo.getDailyBoxOfficeList();
 
+                    List<DailyBoxOfficeVO> list2 = vo.getBoxOfficeResult().getDailyBoxOfficeList();
+
                     adapter.setList(list);
                     adapter.notifyDataSetChanged();
 
@@ -75,10 +75,8 @@ public class DailyBoxofficeActivity extends AppCompatActivity {
                     for(DailyBoxOfficeVO item : list) {
                         Log.i("myLog", item.getMovieNm());
                     }
-
-
                 }
-            }
+           }
 
             @Override
             public void onFailure(Call<BoxOfficeResultBodyVO> call, Throwable t) {
@@ -98,8 +96,6 @@ public class DailyBoxofficeActivity extends AppCompatActivity {
         Log.i("myLog", date);
     }
 }
-
-
 
 class DailyBoxofficeAdapter extends RecyclerView.Adapter<DailyBoxofficeAdapter.MyViewHolder> {
 

@@ -55,4 +55,10 @@ public class PicsumVO {
     public void setDownload_url(String download_url) {
         this.download_url = download_url;
     }
+
+    //1. 생성자
+    //2. setter 메소드
+
+    //1. getter 메소드
+
 }
