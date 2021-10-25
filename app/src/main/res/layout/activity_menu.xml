@@ -96,6 +96,14 @@
             android:backgroundTint="#FFA4A4"
             android:onClick="moveToActivity"
             android:text="주간박스오피스" />
+
+        <Button
+            android:id="@+id/menubtn10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFA4A4"
+            android:onClick="moveToActivity"
+            android:text="영화목록" />
     </TableRow>
 
 </TableLayout>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ch10.DailyBoxofficeActivity">
+    tools:context=".ch10.BoxofficeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class MovieListResultVO {
     private int totCnt;
-    private List<MovieVO> movieListResult;
+    private List<MovieVO> movieList;
 
     public int getTotCnt() {
         return totCnt;
@@ -14,11 +14,11 @@ public class MovieListResultVO {
         this.totCnt = totCnt;
     }
 
-    public List<MovieVO> getMovieListResult() {
-        return movieListResult;
+    public List<MovieVO> getMovieList() {
+        return movieList;
     }
 
-    public void setMovieListResult(List<MovieVO> movieListResult) {
-        this.movieListResult = movieListResult;
+    public void setMovieList(List<MovieVO> movieList) {
+        this.movieList = movieList;
     }
 }
