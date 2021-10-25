@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,22 +27,36 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MovieListActivity extends AppCompatActivity {
-    private Retrofit rf;
+    private KobisService service;
     private final String KEY = "1a0a7ecf96ad3364d8de70e91560767a";
 
     private RecyclerView rvList;
     private MovieListAdapter adapter;
+
+    private final String ITEM_PER_PAGE = "20";
+    private int curPage = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_list);
 
-        rf = new Retrofit.Builder()
+        Retrofit rf = new Retrofit.Builder()
                 .baseUrl("https://www.kobis.or.kr/kobisopenapi/webservice/rest/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+        service = rf.create(KobisService.class);
         rvList = findViewById(R.id.rvList);
+        rvList.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView rView, int newState) {
+                if(!rView.canScrollVertically(1) && newState==RecyclerView.SCROLL_STATE_IDLE) {
+                    Log.i("myLog", "스크롤 끝!");
+                    getList();
+                }
+            }
+        });
+
         adapter = new MovieListAdapter();
         rvList.setAdapter(adapter);
 
@@ -49,9 +64,7 @@ public class MovieListActivity extends AppCompatActivity {
     }
 
     private void getList() {
-        KobisService service = rf.create(KobisService.class);
-
-        Call<MovieListResultBodyVO> call = service.searchMovieList(KEY);
+        Call<MovieListResultBodyVO> call = service.searchMovieList(KEY, ITEM_PER_PAGE, curPage++);
         call.enqueue(new Callback<MovieListResultBodyVO>() {
             @Override
             public void onResponse(Call<MovieListResultBodyVO> call, Response<MovieListResultBodyVO> response) {
@@ -94,8 +107,21 @@ class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.MyViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        MovieVO obj = list.get(position);
+        final MovieVO obj = list.get(position);
         holder.setItem(obj);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String movieCd = obj.getMovieCd();
+                Log.i("myLog", movieCd);
+                Intent intent = new Intent(v.getContext(), MovieDetaActivity.class);
+                intent.putExtra("movieCd", movieCd);
+                v.getContext().startActivity(intent);
+            }
+        });
+
+
     }
 
     @Override

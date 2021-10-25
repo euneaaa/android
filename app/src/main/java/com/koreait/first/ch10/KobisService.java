@@ -1,6 +1,7 @@
 package com.koreait.first.ch10;
 
 import com.koreait.first.ch10.boxofficemodel.BoxOfficeResultBodyVO;
+import com.koreait.first.ch10.searchmoviemodel.MovieInfoResultBodyVO;
 import com.koreait.first.ch10.searchmoviemodel.MovieListResultBodyVO;
 
 import retrofit2.Call;
@@ -17,10 +18,13 @@ public interface KobisService {
     Call<BoxOfficeResultBodyVO> boxofficeSearchDailyBoxOfficeList
             (@Query("key") String key, @Query("targetDt") String targetDt, @Query("weekGb") String weekGb);
 
-
     @GET("movie/searchMovieList.json")
-    Call<MovieListResultBodyVO> searchMovieList
-            (@Query("key") String key);
+    Call<MovieListResultBodyVO> searchMovieList(@Query("key") String key
+            , @Query("itemPerPage") String itemPerPage, @Query("curPage") int curPage);
+
+    @GET("movie/searchMovieInfo.json")
+    Call<MovieInfoResultBodyVO> searchMovieInfo
+            (@Query("key") String key,@Query("movieCd") String movieCd);
 
 }
 

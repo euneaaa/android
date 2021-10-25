@@ -104,6 +104,8 @@
             android:backgroundTint="#FFA4A4"
             android:onClick="moveToActivity"
             android:text="영화목록" />
+
+
     </TableRow>
 
 </TableLayout>

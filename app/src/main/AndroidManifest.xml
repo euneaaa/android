@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.First">
         <activity
+            android:name=".ch10.ActorActivity_2"
+            android:exported="false" />
+        <activity
+            android:name=".ch10.MovieDetaActivity"
+            android:exported="false" />
+        <activity
             android:name=".ch10.MovieListActivity"
             android:exported="false" />
         <activity
