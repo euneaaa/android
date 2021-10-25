@@ -1,11 +1,12 @@
-package com.koreait.first.ch10;
+package com.koreait.first.ch10.boxofficemodel;
 
 import java.util.List;
 
 public class BoxOfficeResultVO {
     private String boxofficeType;
     private String showRange;
-    private List<DailyBoxOfficeVO> dailyBoxOfficeList;
+    private List<BoxOfficeVO> dailyBoxOfficeList;
+    private List<BoxOfficeVO> weeklyBoxOfficeList;
 
     public String getBoxofficeType() {
         return boxofficeType;
@@ -23,11 +24,19 @@ public class BoxOfficeResultVO {
         this.showRange = showRange;
     }
 
-    public List<DailyBoxOfficeVO> getDailyBoxOfficeList() {
+    public List<BoxOfficeVO> getDailyBoxOfficeList() {
         return dailyBoxOfficeList;
     }
 
-    public void setDailyBoxOfficeList(List<DailyBoxOfficeVO> dailyBoxOfficeList) {
+    public void setDailyBoxOfficeList(List<BoxOfficeVO> dailyBoxOfficeList) {
         this.dailyBoxOfficeList = dailyBoxOfficeList;
+    }
+
+    public List<BoxOfficeVO> getWeeklyBoxOfficeList() {
+        return weeklyBoxOfficeList;
+    }
+
+    public void setWeeklyBoxOfficeList(List<BoxOfficeVO> weeklyBoxOfficeList) {
+        this.weeklyBoxOfficeList = weeklyBoxOfficeList;
     }
 }

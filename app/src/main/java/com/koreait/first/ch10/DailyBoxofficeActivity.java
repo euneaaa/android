@@ -1,25 +1,21 @@
 package com.koreait.first.ch10;
 
-import androidx.annotation.NonNull;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.DatePicker;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.DatePicker;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.koreait.first.R;
-import com.koreait.first.Utils;
+import com.koreait.first.ch10.boxofficemodel.BoxOfficeResultBodyVO;
+import com.koreait.first.ch10.boxofficemodel.BoxOfficeResultVO;
+import com.koreait.first.ch10.boxofficemodel.BoxOfficeVO;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -28,28 +24,31 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DailyBoxofficeActivity extends AppCompatActivity {
 
-    private DailyBoxofficeAdapter adapter;
+    private KobisBoxofficeAdapter adapter;
+    private TextView range;
 
     private DatePicker dpTargetDt;
     private RecyclerView rvList;
+
+    Retrofit rf = new Retrofit.Builder()
+            .baseUrl("https://www.kobis.or.kr/kobisopenapi/webservice/rest/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_boxoffice);
-        adapter = new DailyBoxofficeAdapter();
+        adapter = new KobisBoxofficeAdapter();
 
+        range = findViewById(R.id.range);
         dpTargetDt = findViewById(R.id.dpTargetDt);
         rvList = findViewById(R.id.rvList);
         rvList.setAdapter(adapter);
     }
 
     private void network(String targetDt) {
-        Retrofit rf = new Retrofit.Builder()
-                .baseUrl("https://www.kobis.or.kr/kobisopenapi/webservice/rest/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
 
         KobisService service = rf.create(KobisService.class);
         final String KEY = "1a0a7ecf96ad3364d8de70e91560767a";
@@ -62,17 +61,19 @@ public class DailyBoxofficeActivity extends AppCompatActivity {
                     BoxOfficeResultBodyVO vo = res.body();
 
                     BoxOfficeResultVO resultVo = vo.getBoxOfficeResult();
-                    List<DailyBoxOfficeVO> list = resultVo.getDailyBoxOfficeList();
+                    List<BoxOfficeVO> list = resultVo.getDailyBoxOfficeList();
 
-                    List<DailyBoxOfficeVO> list2 = vo.getBoxOfficeResult().getDailyBoxOfficeList();
+                    List<BoxOfficeVO> list2 = vo.getBoxOfficeResult().getDailyBoxOfficeList();
 
                     adapter.setList(list);
                     adapter.notifyDataSetChanged();
 
+                    range.setText(resultVo.getShowRange());
+
                     Log.i("myLog", list.size() + "개");
 
 
-                    for(DailyBoxOfficeVO item : list) {
+                    for(BoxOfficeVO item : list) {
                         Log.i("myLog", item.getMovieNm());
                     }
                 }
@@ -96,52 +97,3 @@ public class DailyBoxofficeActivity extends AppCompatActivity {
         Log.i("myLog", date);
     }
 }
-
-class DailyBoxofficeAdapter extends RecyclerView.Adapter<DailyBoxofficeAdapter.MyViewHolder> {
-
-    private List<DailyBoxOfficeVO> list;
-
-    public void setList(List<DailyBoxOfficeVO> list) {
-        this.list = list;
-    }
-
-    @NonNull
-    @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View v = inflater.inflate(R.layout.item_daily_boxoffice, parent, false);
-        return new MyViewHolder(v);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        DailyBoxOfficeVO vo = list.get(position);
-        holder.setItem(vo);
-
-        // holder.setItem(list.get(position));
-    }
-
-    @Override
-    public int getItemCount() {
-        return list == null ? 0 : list.size();
-    }
-
-
-    static class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvTitle;
-        private TextView tvAudienceCnt;
-
-        public MyViewHolder(View v) {
-            super(v);
-            tvTitle = v.findViewById(R.id.tvTitle);
-            tvAudienceCnt = v.findViewById(R.id.tvAudienceCnt);
-        }
-
-        public void setItem(DailyBoxOfficeVO vo) {
-            tvTitle.setText(vo.getMovieNm());
-            String numberComma = Utils.getNumberComma(vo.getAudiCnt());
-            tvAudienceCnt.setText(numberComma + "명");
-        }
-    }
-}
-
