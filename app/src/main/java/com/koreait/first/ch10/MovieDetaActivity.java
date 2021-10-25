@@ -81,7 +81,7 @@ public class MovieDetaActivity extends AppCompatActivity {
                     tvmovieNmEn.setText(info.getMovieNmEn());
                     tvshowTm.setText(info.getShowTm());
 
-                    Log.i("myLog", actors.size() + "개");
+                    Log.i("myLog", actors.size() + "명");
 
                 } else{
 
